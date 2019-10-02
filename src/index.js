@@ -13,10 +13,6 @@ module.exports = function check(str, bracketsConfig) {
     const isCanDel = (str, sym) => str.length && str[0] === sym;
 
     const resultString = [...str].reduce((acc, el) => {
-        console.log("::");
-        console.log("acc:", acc);
-        console.log("el:", el);
-
         if (
             Object.keys(openAlphabet).includes(el) &&
             closeAlphabet.indexOf(el) !== -1
